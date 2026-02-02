@@ -1,20 +1,21 @@
-// M1. Review of Procedural Programming Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// M1. Review of Procedural Programming Project.cpp : Grade Book
 
 #include <iostream>
 
+using namespace std;
+
+// Constants
+const int MAX_CLASS_SIZE = 150;
+const int NUM_TEST_SCORES = 5;
+
+// Functions
+int ReadData(string nmaes[], double scores[][NUM_TEST_SCORES]);
+double GetAvg(const double scores[], int size);
+char GetLetterGrade(double average);
+void printReport(const string names[], const double avergaes[], const char grades[], int count);
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
