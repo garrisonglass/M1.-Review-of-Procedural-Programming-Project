@@ -1,6 +1,9 @@
 // M1. Review of Procedural Programming Project.cpp : Grade Book
 
 #include <iostream>
+#include <string>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -9,10 +12,10 @@ const int MAX_CLASS_SIZE = 150;
 const int NUM_TEST_SCORES = 5;
 
 // Functions
-int ReadData(string nmaes[], double scores[][NUM_TEST_SCORES]);
+int ReadData(string names[], double scores[][NUM_TEST_SCORES]);
 double GetAvg(const double scores[], int size);
 char GetLetterGrade(double average);
-void printReport(const string names[], const double avergaes[], const char grades[], int count);
+void printReport(const string names[], const double averages[], const char grades[], int count);
 
 int main()
 {
