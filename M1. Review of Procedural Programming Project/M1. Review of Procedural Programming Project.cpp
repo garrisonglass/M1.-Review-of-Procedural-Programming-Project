@@ -44,6 +44,17 @@ int ReadData(string names[], double scores[][NUM_TEST_SCORES])
     return count;
 }
 
+// Calculates the average score for a student
+double GetAvg(const double scores[], int size)
+{
+    double sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+           sum+= scores[i];
+    }
+    return sum / size;
+}
+
 // Assigns letter grade based on the students average
 char GetLetterGrade(double average) 
 {
