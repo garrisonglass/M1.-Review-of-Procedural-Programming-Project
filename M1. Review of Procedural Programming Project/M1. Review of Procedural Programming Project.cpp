@@ -44,7 +44,7 @@ int ReadData(string names[], double scores[][NUM_TEST_SCORES])
     return count;
 }
 
-// Calculates the average score for a student
+// Assigns letter grade based on the students average
 char GetLetterGrade(double average) 
 {
     if      (average >= 90) return 'A';
