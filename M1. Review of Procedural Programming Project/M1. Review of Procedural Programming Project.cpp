@@ -19,18 +19,33 @@ void printReport(const string names[], const double averages[], const char grade
 
 int main()
 {
-    cout << "Hello World!\n";
+	string names[MAX_CLASS_SIZE];
+	double scores[MAX_CLASS_SIZE][NUM_TEST_SCORES];
+	double averages[MAX_CLASS_SIZE];
+	char   grades[MAX_CLASS_SIZE];
+
+	int studentCount = ReadData(names, scores);
+
+    for (int i = 0; i < studentCount; i++)
+    {
+        averages[i] = GetAvg(scores[i], NUM_TEST_SCORES);
+        grades[i]   = GetLetterGrade(averages[i]);
+	}
+    printReport(names, averages, grades, studentCount);
+	
+    return 0;
 }
 
-// Determines the letter grade based on average score
+// Reads data from file and returns number of students read
 int ReadData(string names[], double scores[][NUM_TEST_SCORES])
 {
-    ifstream inFile("grades.txt");
+    ifstream inFile("StudentGrades.txt");
     if (!inFile)
     {
         cout << "Error opening file!" << endl;
         return 0;
     }
+
     int count = 0;
     while (count < MAX_CLASS_SIZE && inFile >> names[count])
     {
@@ -40,7 +55,9 @@ int ReadData(string names[], double scores[][NUM_TEST_SCORES])
         }
         count++;
     }
+
     inFile.close();
+
     return count;
 }
 
@@ -66,7 +83,7 @@ char GetLetterGrade(double average)
 }
 
 // Prints formatted grade report
-void printReport(const string names[], const double averages[], const char grages[], int count)
+void printReport(const string names[], const double averages[], const char grades[], int count)
 {
     cout << left
          << setw(15) << "Names"
@@ -81,7 +98,7 @@ void printReport(const string names[], const double averages[], const char grage
         cout<< left
             << setw(15) << names[i]
             << setw(10) << fixed << setprecision(2) << averages[i]
-            << setw(10) << grages[i]
+            << setw(10) << grades[i]
 			<< endl;
     }
 }

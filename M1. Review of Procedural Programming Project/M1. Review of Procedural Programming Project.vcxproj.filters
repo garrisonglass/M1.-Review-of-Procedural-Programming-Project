@@ -19,4 +19,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\OneDrive\Documents\School\TNCC\CSC\222\StudentGrades.txt" />
+  </ItemGroup>
 </Project>
