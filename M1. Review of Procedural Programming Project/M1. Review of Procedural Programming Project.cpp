@@ -28,7 +28,7 @@ string getPlayerChoice()
 		cout << "Enter rock, paper, scissors, or quit: ";
 		cin >> choice;
 
-		if (choice == "rock" || choice == "paper" || choice == "scissors" || choice "quit")
+		if (choice == "rock" || choice == "paper" || choice == "scissors" || choice == "quit")
 		{
 			return choice;
 		}
