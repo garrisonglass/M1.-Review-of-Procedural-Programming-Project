@@ -19,4 +19,20 @@ int main()
 
 }
 
+string getPlayerChoice()
+{
+	string choice;
 
+	while (true)
+	{
+		cout << "Enter rock, paper, scissors, or quit: ";
+		cin >> choice;
+
+		if (choice == "rock" || choice == "paper" || choice == "scissors" || choice "quit")
+		{
+			return choice;
+		}
+
+		cout << "That isn't an option. Please try again." << endl;
+	}
+}
