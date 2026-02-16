@@ -50,3 +50,17 @@ string getNPCchoice(mt19937& rando)
 // include (num == 2) for "scissors", (num == 3) for "lizard" and return for "Spock"; 
 }
 
+int whoIsTheWinner(string player, string NPC)
+{
+	if (player == NPC)
+		return 0;
+
+	else if ((player == "rock" && NPC == "scissors") ||
+		     (player == "paper" && NPC == "rock") ||
+		     (player == "scissors" && NPC == "paper"))
+		return 1;
+	
+	else
+		return 2;
+	
+}
