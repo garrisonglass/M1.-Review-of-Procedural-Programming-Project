@@ -7,3 +7,16 @@
 
 using namespace std;
 
+// Function prototypes
+string getPlayerChoice();
+string getNPCchoice(mt19937& rng);
+int whoIsTheWinner(string player, string NPC);
+void updateScores(int results, int playerScore, int NPCscore);
+void displayFinal(int playerScore, int NPCscores);
+
+int main()
+{
+
+}
+
+
