@@ -20,7 +20,20 @@ int main()
 	random_device rd;
 	mt19937 rando(rd());
 
+	int playerScore = 0;
+	int NPCscore = 0;
+
 	cout << "Welcome to Rock, Paper, Scissors!\n";
+
+	while (true)
+	{
+		string player = getPlayerChoice();
+
+		if (player == "quit")
+			break;
+		string NPC = getNPCchoice(rando);
+
+		cout << "Computer choise: " << NPC << endl;
 
 }
 
