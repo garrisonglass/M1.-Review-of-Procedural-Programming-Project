@@ -28,7 +28,10 @@ string getPlayerChoice()
 		cout << "Enter rock, paper, scissors, or quit: ";
 		cin >> choice;
 
-		if (choice == "rock" || choice == "paper" || choice == "scissors" || choice == "quit")// **add || choice == "lizard" || choice == "Spock"**
+		if (choice == "rock" || 
+			choice == "paper" || 
+			choice == "scissors" || 
+			choice == "quit")// **add || choice == "lizard" || choice == "Spock"**
 		{
 			return choice;
 		}
@@ -47,7 +50,7 @@ string getNPCchoice(mt19937& rando)
 	if (num == 1)
 		return "paper";
 	return "scissors";
-// include (num == 2) for "scissors", (num == 3) for "lizard" and return for "Spock"; 
+// **include (num == 2) for "scissors", (num == 3) for "lizard" and return for "Spock";** 
 }
 
 int whoIsTheWinner(string player, string NPC)
@@ -63,4 +66,12 @@ int whoIsTheWinner(string player, string NPC)
 	else
 		return 2;
 	
+}
+
+void updateScores(int results, int playerScore, int NPCscore)
+{
+	if (results == 1)
+		playerScore++;
+	else if (results == 2)
+		NPCscore++;
 }
