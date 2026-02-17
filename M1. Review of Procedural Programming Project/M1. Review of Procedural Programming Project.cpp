@@ -87,8 +87,8 @@ void printReport(const string names[], const double averages[], const char grade
 {
     cout << left
          << setw(12) << "Names"
-         << setw(10) << "Averages"
-         << setw(12) << "Grades"
+         << setw(11) << "Averages"
+         << setw(10) << "Grades"
          << endl;
 
 	cout << "------------------------------\n";
@@ -97,8 +97,8 @@ void printReport(const string names[], const double averages[], const char grade
     {
         cout<< left
             << setw(12) << names[i]
-            << setw(10) << fixed << setprecision(2) << averages[i]
-            << setw(12) << grades[i]
+            << setw(11) << fixed << setprecision(2) << averages[i]
+            << setw(10) << grades[i]
 			<< endl;
     }
 }
