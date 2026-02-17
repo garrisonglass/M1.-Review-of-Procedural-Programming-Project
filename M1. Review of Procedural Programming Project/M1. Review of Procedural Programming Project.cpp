@@ -16,7 +16,11 @@ void displayFinal(int playerScore, int NPCscores);
 
 int main()
 {
+// Random number generator setup
+	random_device rd;
+	mt19937 rando(rd());
 
+	cout << "Welcome to Rock, Paper, Scissors!\n";
 }
 
 string getPlayerChoice()
@@ -74,4 +78,18 @@ void updateScores(int results, int playerScore, int NPCscore)
 		playerScore++;
 	else if (results == 2)
 		NPCscore++;
+}
+
+void displayFinal(int playerScore, int NPCscore)
+{
+	cout << "\n--- Final Results ---\n";
+	cout << "Your Score: " << playerScore << endl;
+	cout << "Computer Score: " << NPCscore << endl;
+
+	if (playerScore > NPCscore)
+		cout << "You are the winner!" << endl;
+	else if (NPCscore > playerScore)
+		cout << "Computer wins!" << endl;
+	else
+		cout << "The game ends in a draw!" << endl;
 }
