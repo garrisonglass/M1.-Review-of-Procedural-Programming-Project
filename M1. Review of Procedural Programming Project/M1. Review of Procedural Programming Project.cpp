@@ -86,19 +86,19 @@ char GetLetterGrade(double average)
 void printReport(const string names[], const double averages[], const char grades[], int count)
 {
     cout << left
-         << setw(15) << "Names"
+         << setw(12) << "Names"
          << setw(10) << "Averages"
-         << setw(10) << "Grades"
+         << setw(12) << "Grades"
          << endl;
 
-	cout << "----------------------------------------\n";
+	cout << "------------------------------\n";
 
     for (int i = 0; i < count; i++)
     {
         cout<< left
-            << setw(15) << names[i]
+            << setw(12) << names[i]
             << setw(10) << fixed << setprecision(2) << averages[i]
-            << setw(10) << grades[i]
+            << setw(12) << grades[i]
 			<< endl;
     }
 }
