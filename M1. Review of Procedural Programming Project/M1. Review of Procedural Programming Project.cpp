@@ -21,6 +21,7 @@ int main()
 	mt19937 rando(rd());
 
 	cout << "Welcome to Rock, Paper, Scissors!\n";
+
 }
 
 string getPlayerChoice()
