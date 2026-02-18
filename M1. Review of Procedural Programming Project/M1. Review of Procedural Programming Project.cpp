@@ -46,7 +46,7 @@ int main()
 			cout << "Computer wins this round!" << endl;
 
 		cout << "Current Score - You: " << playerScore
-			<< "Computer: " << NPCscore << endl;
+			<< " | Computer: " << NPCscore << endl;
 	}
 	displayFinal(playerScore, NPCscore);
 
