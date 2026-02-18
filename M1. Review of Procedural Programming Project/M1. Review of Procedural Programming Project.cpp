@@ -12,7 +12,7 @@ string getPlayerChoice();
 string getNPCchoice(mt19937& rando);
 int whoIsTheWinner(string player, string NPC);
 void updateScores(int results, int playerScore, int NPCscore);
-void displayFinal(int playerScore, int NPCscores);
+void displayFinal(int playerScore, int NPCscore);
 
 int main()
 {
@@ -35,7 +35,23 @@ int main()
 
 		cout << "Computer choise: " << NPC << endl;
 
+		int result = whoIsTheWinner(player, NPC);
+		updateScores(result, playerScore, NPCscore);
+
+		if (result == 0)
+			cout << "It's a draw!" << endl;
+		else if (result == 1)
+			cout << "You win this round!" << endl;
+		else
+			cout << "Computer wins this round!" << endl;
+
+		cout << "Current Score - You: " << playerScore
+			<< "Computer: " << NPCscore << endl;
+	}
+	displayFinal(playerScore, NPCscore);
+
 }
+
 
 string getPlayerChoice()
 {
