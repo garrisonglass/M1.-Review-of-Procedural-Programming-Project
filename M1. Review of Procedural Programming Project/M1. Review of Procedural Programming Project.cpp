@@ -2,7 +2,6 @@
 //**comments to expand to rock, paper, scissors, lizard, Spock**
 #include <iostream>
 #include <string>
-#include <iomanip>
 #include <random>
 
 using namespace std;
@@ -10,8 +9,8 @@ using namespace std;
 // Function prototypes
 string getPlayerChoice();
 string getNPCchoice(mt19937& rando);
-int whoIsTheWinner(string player, string NPC);
-void updateScores(int results, int playerScore, int NPCscore);
+int whoIsTheWinner(const string& player, const string& NPC);
+void updateScores(int results, int& playerScore, int& NPCscore);
 void displayFinal(int playerScore, int NPCscore);
 
 int main()
@@ -87,7 +86,7 @@ string getNPCchoice(mt19937& rando)
 // **include (num == 2) for "scissors", (num == 3) for "lizard" and return for "Spock";** 
 }
 
-int whoIsTheWinner(string player, string NPC)
+int whoIsTheWinner(const string& player, const string& NPC)
 {
 	if (player == NPC)
 		return 0;
@@ -102,7 +101,7 @@ int whoIsTheWinner(string player, string NPC)
 	
 }
 
-void updateScores(int results, int playerScore, int NPCscore)
+void updateScores(int results, int& playerScore, int& NPCscore)
 {
 	if (results == 1)
 		playerScore++;
